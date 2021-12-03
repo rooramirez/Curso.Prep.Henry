@@ -18,9 +18,9 @@ function obtenerMayor(x, y) {
   // else return x;
 
   if (x < y) {
-    return 'es mayor y' + ' ' + y;
+    return  y;
   }
-  else return 'es mayor x' + ' ' + x;
+  else return  x;
 
 }
 
@@ -44,7 +44,7 @@ function conection(status) {
 
   //var status; 
   //status.length === 1 && 
-  if (status > 0 && status <= 2) {
+
 
     switch (status) {
       case 1: return "Online"; break;
@@ -52,8 +52,7 @@ function conection(status) {
       default: return "Offline";
     }
 
-  }
-  else return 'ingrese valor correcto';
+
 
 }
 
@@ -68,8 +67,8 @@ function saludo(idioma) {
   switch (idioma) {
     case "aleman": return "Guten Tag!";
     case "mandarin": return "Ni Hao!";
-    case "ingles": return "Hello";
-    default: return "Hola";
+    case "ingles": return "Hello!";
+    default: return "Hola!";
 
   }
 
@@ -229,7 +228,10 @@ function tieneTresDigitos(numero) {
   //Escribe tu código aquí
   //var numero; 
 
-  if(numero > 99 || numero < -99 && numero < 1000 || numero > -1000){
+  if(numero > 99  && numero < 1000 ){
+    return true;
+  }
+  if(numero < -99  && numero > -1000 ){
     return true;
   }
    return false;
